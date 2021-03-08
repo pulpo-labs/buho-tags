@@ -10,17 +10,9 @@ pylint-django = "*"
 
 [packages]
 django = "*"
-graphene = "*"
-graphene-django = "*"
-graphene-federation = "*"
 
 [requires]
 python_version = "3.8"
-
-[packages.graphene-utils]
-editable = true
-ref = "0.2.2"
-git = "https://github.com/pulpo-labs/graphene-utils.git"
 
 [packages.django-mixins]
 editable = true

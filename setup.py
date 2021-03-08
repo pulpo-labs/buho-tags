@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='buho-tags',
-    version='0.1.1',
+    version='0.1.2',
     packages=find_namespace_packages(include=['buho.*']),
     include_package_data=True,
     description='This project adds support for Tags.',
@@ -24,9 +24,6 @@ setup(
         'Programming Language :: Python :: 3.8',
     ],
     install_requires=[
-        "Django >= 3.0.0",
-        "graphene >= 2.1",
-        "graphene-django >= 2.15.0",
-        "graphene-federation >= 0.1.0"
+        "Django >= 3.0.0"
     ]
 )
