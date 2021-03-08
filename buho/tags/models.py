@@ -4,17 +4,17 @@ from django.utils.translation import gettext_lazy as _
 
 
 class TagCategory(models.TextChoices):
-    SERVICES = 'SERVICES', _('Servicios')
-    PAYMENT_METHODS = 'PAYMENT_METHODS', _('Métodos de Pago')
-    FOOD_TYPE = 'FOOD_TYPE', _('Tipo de comida')
-    INFRASTRUCTURE = 'INFRASTRUCTURE', _('Instalaciones')
+    SERVICES = 'SERVICES', 'SERVICES'
+    PAYMENT_METHODS = 'PAYMENT_METHODS', 'PAYMENT_METHODS'
+    FOOD_TYPE = 'FOOD_TYPE', 'FOOD_TYPE'
+    INFRASTRUCTURE = 'INFRASTRUCTURE', 'INFRASTRUCTURE'
 
 
 class Tag(
     mixins.SoftDeleteMixin,
     mixins.TimestampsMixin
 ):
-    category = models.CharField(choices=TagCategory.choices)
+    category = models.CharField(max_length=50, choices=TagCategory.choices)
     text = models.CharField(max_length=255)
 
     class Meta:
